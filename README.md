@@ -12,6 +12,17 @@ You can get some cool effects by muting with this plugin and automating the chan
 
 ## Building (Windows)
 
+### Download the installer
+
+No build needed: download **[BigUglyPinkMutePlugin-Setup-1.0.0.exe](https://github.com/burnerburnerburnerburnerburnerburner/biguglypinkmuteplugin/raw/main/dist/BigUglyPinkMutePlugin-Setup-1.0.0.exe)** (64-bit Windows) and run it.
+
+- It installs the plugin to `C:\Program Files\Common Files\VST3\Big Ugly Pink Mute Plugin.vst3`, then rescan plugins in your DAW.
+- It asks for admin rights, because that folder is system-wide.
+- The installer isn't code-signed, so Windows SmartScreen may warn you. Choose **More info → Run anyway**.
+- Uninstall from **Settings → Apps → Installed apps**.
+
+### Build from source
+
 Requires CMake 3.22+, Ninja, Git and Visual Studio 2022 (or the Build Tools) with the C++ workload.
 
 ```bat
@@ -27,6 +38,16 @@ The plugin is written to:
 ```
 
 Copy that folder into `C:\Program Files\Common Files\VST3` (needs admin), then rescan plugins in your DAW.
+
+### Package the installer
+
+With [Inno Setup 6](https://jrsoftware.org/isinfo.php) installed, build the plugin first, then:
+
+```bat
+ISCC.exe installer\BigUglyPinkMutePlugin.iss
+```
+
+The installer is written to `dist\`. Pass `/DVST3Bundle=<path to .vst3>` if the plugin was built somewhere else.
 
 ## Tests
 
