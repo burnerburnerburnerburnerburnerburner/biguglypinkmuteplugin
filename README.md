@@ -56,3 +56,7 @@ Configure with `-DGLASSMUTE_BUILD_TESTS=ON` to build `GlassMuteTests`, which run
 ```bat
 GlassMuteTests.exe <output-folder>
 ```
+
+## License
+
+Licensed under the [GNU Affero General Public License v3.0](LICENSE). The plugin is built with [JUCE](https://juce.com), which it uses under the same license.
