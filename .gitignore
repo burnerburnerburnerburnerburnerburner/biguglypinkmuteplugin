@@ -20,3 +20,6 @@ JUCE/
 *.user
 .DS_Store
 Thumbs.db
+
+# Packaged installers are published from dist/
+!dist/*.exe
