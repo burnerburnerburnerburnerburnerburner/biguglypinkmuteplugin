@@ -38,3 +38,27 @@ target_link_libraries(GlassMute
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags
         juce::juce_recommended_warning_flags)
+
+# Offline checks: runs audio through the processor and renders the editor to PNGs.
+option(GLASSMUTE_BUILD_TESTS "Build the offline test tool" OFF)
+
+if(GLASSMUTE_BUILD_TESTS)
+    juce_add_console_app(GlassMuteTests PRODUCT_NAME "GlassMuteTests")
+
+    target_sources(GlassMuteTests PRIVATE
+        Tests/Tests.cpp
+        Source/PluginProcessor.cpp
+        Source/PluginEditor.cpp)
+
+    target_compile_definitions(GlassMuteTests PRIVATE
+        "JucePlugin_Name=\"Big Ugly Pink Mute Plugin\""
+        JUCE_WEB_BROWSER=0
+        JUCE_USE_CURL=0)
+
+    target_link_libraries(GlassMuteTests
+        PRIVATE
+            juce::juce_audio_utils
+        PUBLIC
+            juce::juce_recommended_config_flags
+            juce::juce_recommended_warning_flags)
+endif()
