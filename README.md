@@ -14,7 +14,7 @@ You can get some cool effects by muting with this plugin and automating the chan
 
 ### Download the installer
 
-No build needed: download **[BigUglyPinkMutePlugin-Setup-1.0.0.exe](https://github.com/burnerburnerburnerburnerburnerburner/biguglypinkmuteplugin/raw/main/dist/BigUglyPinkMutePlugin-Setup-1.0.0.exe)** (64-bit Windows) and run it.
+No build needed: download **[BigUglyPinkMutePlugin-Setup-1.0.0.exe](https://raw.githubusercontent.com/burnerburnerburnerburnerburnerburner/biguglypinkmuteplugin/main/dist/BigUglyPinkMutePlugin-Setup-1.0.0.exe)** (64-bit Windows) and run it.
 
 - It installs the plugin to `C:\Program Files\Common Files\VST3\Big Ugly Pink Mute Plugin.vst3`, then rescan plugins in your DAW.
 - It asks for admin rights, because that folder is system-wide.
