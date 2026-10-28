@@ -1,25 +1,14 @@
 # Big Ugly Pink Mute Plugin
 
-A VST3 effect with exactly one job: an automatable on/off dial, in the spirit of Fruity Mute 2, dressed in pink liquid glass.
+Its Fruity Mute 2 but it works on everything
 
 | Unmuted | Muted |
 | --- | --- |
 | ![Unmuted at 100%](docs/ui_on.png) | ![Muted at 30%](docs/ui_muted.png) |
 
-## How it works
+Turn the dial down, the channel mutes. Turn it up, it unmutes. 
 
-- One parameter, **On/Off**, from 0 to 100%.
-- **Below 50%** the signal is muted. **50% and above** it passes through untouched.
-- Opens at **100% (unmuted)**.
-- The host shows the value as `On` or `Muted`, so automation lanes read clearly.
-- Each switch fades over 4 ms, so gating stays tight without clicks.
-- Mono and stereo.
-
-## Controls
-
-- **Dial**: drag up/down to turn. Double-click to reset to 100%.
-- **Status pill**: click to toggle between muted and unmuted.
-- The white bead at twelve o'clock marks the 50% threshold.
+You can get some cool effects by muting with this plugin and automating the channel mix.
 
 ## Building (Windows)
 
